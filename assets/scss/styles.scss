@@ -1,4 +1,8 @@
 @import "botones";
+@import "mixins";
+@import "tarjetas";
+@import "variables";
+
 
 *{
     margin: 10px;
@@ -59,11 +63,13 @@ nav ul :hover{
 }
 
 .btn{
-    width: 100px;
-    border: 0;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5;
+    width: map-get($boton, ancho );
+    height: map-get($boton, alto );
+    border: map-get($boton, bordes );
+    padding: map-get($boton, padding);
+    border-radius: map-get($boton, radio );
+    margin: map-get($boton, margen );
+    @include color-fondo-boton
 }
 
 .banner{
@@ -134,12 +140,6 @@ section a{
     flex-direction: column;
 }
 
-.tarjeta{
-    display: flex;
-    width: 400px;
-    padding: 15px;
-}
-
 .tarjeta__info{
     padding: 15px;
     text-align: justify;
@@ -205,4 +205,7 @@ section a{
     justify-content: space-around;
 }
 
-
+.tarjeta{
+    display: flex;
+    @extend %tarjeta;
+}

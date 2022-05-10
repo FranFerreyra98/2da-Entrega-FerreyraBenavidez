@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 .btn{
     width: map-get($boton, ancho );
@@ -7,4 +8,7 @@
     padding: map-get($boton, padding);
     border-radius: map-get($boton, radio );
     margin: map-get($boton, margen );
+    @include color-fondo-boton
 }
+
+
