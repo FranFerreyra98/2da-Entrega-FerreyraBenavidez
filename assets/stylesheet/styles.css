@@ -131,9 +131,26 @@ section a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 200px auto auto auto;
   grid-template-areas: "header navbar "
- "titulo titulo"
- "main   main"
- "footer footer";
+                       "titulo titulo"
+                       "main   main"
+                       "footer footer";
+}
+
+.header{
+  grid-area: header;
+}
+
+.navbar{
+  grid-area: navbar;
+}
+
+.titulo{
+  grid-area: titulo;
+}
+
+.titulo_autos{
+  display: flex;
+  justify-content: center;
 }
 
 .main {
@@ -189,15 +206,19 @@ section a {
   transition: 3s;
 }
 
+.footer{
+  grid-area: footer;
+}
+
 .body__historia {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 200px auto auto auto;
   grid-template-areas: "header navbar "
- "banner banner"
- "cards  cards"
- "footer footer";
+                       "banner banner"
+                       "cards  cards"
+                       "footer footer";
 }
 
 .cards {
@@ -211,4 +232,6 @@ section a {
   align-items: center;
   justify-content: space-around;
 }
+
+
 
