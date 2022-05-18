@@ -1,11 +1,16 @@
 .btn {
-  width: auto;
+  width: 500;
   height: auto;
   border: 0;
   padding: 5px 10px;
   border-radius: 5px;
   margin: 5px;
   background-color: #1661ee;
+}
+
+.tarjeta {
+  width: 400px;
+  padding: 15px;
 }
 
 * {
@@ -18,11 +23,7 @@
   gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 200px auto auto auto 200px;
-  grid-template-areas: "header navbar "
- "banner banner"
- "qs     qs"
- "museo  museo"
- "footer footer";
+  grid-template-areas: "header navbar " "banner banner" "qs     qs" "museo  museo" "footer footer";
 }
 
 .header {
@@ -130,39 +131,13 @@ section a {
   gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 200px auto auto auto;
-  grid-template-areas: "header navbar "
-                       "titulo titulo"
-                       "main   main"
-                       "footer footer";
-}
-
-.header{
-  grid-area: header;
-}
-
-.navbar{
-  grid-area: navbar;
-}
-
-.titulo{
-  grid-area: titulo;
-}
-
-.titulo_autos{
-  display: flex;
-  justify-content: center;
+  grid-template-areas: "header navbar " "titulo titulo" "main   main" "footer footer";
 }
 
 .main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-}
-
-.tarjeta {
-  display: flex;
-  width: 400px;
-  padding: 15px;
 }
 
 .tarjeta__info {
@@ -176,10 +151,7 @@ section a {
 
 @media (min-width: 768px) {
   .body {
-    grid-template-areas: "header navbar "
- "banner banner"
- "qs     museo"
- "footer footer";
+    grid-template-areas: "header navbar " "banner banner" "qs     museo" "footer footer";
   }
   .main {
     grid-area: main;
@@ -206,19 +178,12 @@ section a {
   transition: 3s;
 }
 
-.footer{
-  grid-area: footer;
-}
-
 .body__historia {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 200px auto auto auto;
-  grid-template-areas: "header navbar "
-                       "banner banner"
-                       "cards  cards"
-                       "footer footer";
+  grid-template-areas: "header navbar " "banner banner" "cards  cards" "footer footer";
 }
 
 .cards {
@@ -233,5 +198,6 @@ section a {
   justify-content: space-around;
 }
 
-
-
+.tarjeta {
+  display: flex;
+}
